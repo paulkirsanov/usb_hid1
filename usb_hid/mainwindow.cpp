@@ -158,7 +158,7 @@ void MainWindow::on_pushButton_clicked()
 
         ui->pushButton->setStyleSheet("QPushButton{ background-color: green; "
                                         "border-style: outset;"
-                                        "border-width: 2px;"
+                                        "border-width: 1px;"
                                         "border-radius: 10px;"
                                         "border-color: rgb(224, 0, 0);"
                                         "padding: 6px }");
