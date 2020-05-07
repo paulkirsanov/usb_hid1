@@ -177,7 +177,7 @@ void MainWindow::on_pushButton_2_clicked()
     int ret = 0;
     char data = 0;
 
-    ret = usb_bulk_write(dev, EP_OUT, &data, 1, 500);
+    ret = usb_bulk_write(dev, EP_OUT, &data, 1, 500);//1
     if (ret < 0)
     {
         printf("No sended data!\n");
