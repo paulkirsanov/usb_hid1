@@ -72,7 +72,7 @@ public:
         label_4->setAlignment(Qt::AlignCenter);
         dial = new QDial(centralWidget);
         dial->setObjectName(QStringLiteral("dial"));
-        dial->setGeometry(QRect(170, 90, 91, 81));
+        dial->setGeometry(QRect(160, 110, 91, 81));
         MainWindow->setCentralWidget(centralWidget);
 
         retranslateUi(MainWindow);

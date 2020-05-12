@@ -158,7 +158,7 @@ void MainWindow::on_pushButton_clicked()
 
         ui->pushButton->setStyleSheet("QPushButton{ background-color: green; "
                                         "border-style: outset;"
-                                        "border-width: 1px;"
+                                        "border-width: 2px;"
                                         "border-radius: 10px;"
                                         "border-color: rgb(224, 0, 0);"
                                         "padding: 6px }");
@@ -177,7 +177,7 @@ void MainWindow::on_pushButton_2_clicked()
     int ret = 0;
     char data = 0;
 
-    ret = usb_bulk_write(dev, EP_OUT, &data, 1, 500);//1
+    ret = usb_bulk_write(dev, EP_OUT, &data, 1, 500);
     if (ret < 0)
     {
         printf("No sended data!\n");
