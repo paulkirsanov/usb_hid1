@@ -77,6 +77,7 @@ MainWindow::~MainWindow()
 void MainWindow::ReadyCheck()
 {
     int ret = 0;
+    char str[5] = {};
 
     char USB_data[BUF_SIZE];
     if (!dev)
@@ -117,7 +118,10 @@ void MainWindow::ReadyCheck()
         ui->label_3->setText("0x" + QString::number(USB_data[1], 'i', 0));
         ui->label_3->setStyleSheet("color: rgb(100, 0, 0)");
 
-        ui->label_4->setText("0x" + QString::number(USB_data[2], 'i', 0));
+        double y = (USB_data[2] << 8) + USB_data[3];
+        double x = y * 3 / 4096;
+        sprintf(str, "%0.2f", x);
+        ui->label_4->setText(str); // description adc value
         ui->label_4->setStyleSheet("color: rgb(100, 0, 0)");
     }
 }

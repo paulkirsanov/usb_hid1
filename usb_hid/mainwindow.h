@@ -13,7 +13,7 @@
 #define EP_IN 0x81
 #define EP_OUT 0x01
 // Device of bytes to transfer.
-#define BUF_SIZE 3
+#define BUF_SIZE 4
 // Device configuration and interface id.
 #define MY_CONFIG 1
 #define MY_INTF 0
