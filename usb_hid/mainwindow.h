@@ -5,15 +5,16 @@
 #include "C:\libusb\include/lusb0_usb.h"
 #include <QTimer>
 #include <QMessageBox>
+#include <lusb0_usb.h>
 
 // Device vendor and product id.
 #define MY_VID 0x0483
-#define MY_PID 0x5750
+#define MY_PID 0x5711
 // Device endpoint(s)
 #define EP_IN 0x81
 #define EP_OUT 0x01
 // Device of bytes to transfer.
-#define BUF_SIZE 4
+#define BUF_SIZE 2
 // Device configuration and interface id.
 #define MY_CONFIG 1
 #define MY_INTF 0
@@ -34,6 +35,7 @@ private:
     Ui::MainWindow *ui;
     bool connect_status;
     QTimer Timer;
+
 private slots:
     void ReadyCheck(void);
     void on_pushButton_clicked();

@@ -40,7 +40,7 @@ else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
 
 
-LIBS +=          C:/libusb/lib/gcc/libusb.a
-INCLUDEPATH +=   C:/libusb/include/
-DEPENDPATH +=    C:/libusb/include/
-PRE_TARGETDEPS+= C:/libusb/lib/gcc/libusb.a
+win32: LIBS +=          C:/libusb/lib/gcc/libusb.a
+win32: INCLUDEPATH +=   C:/libusb/include/
+win32: DEPENDPATH +=    C:/libusb/include/
+win32: PRE_TARGETDEPS+= C:/libusb/lib/gcc/libusb.a

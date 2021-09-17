@@ -66,7 +66,6 @@ MainWindow::MainWindow(QWidget *parent) :
     {
         printf("success: claim_interface #%d\n", MY_INTF);
     }
-
 }
 
 MainWindow::~MainWindow()
@@ -118,10 +117,10 @@ void MainWindow::ReadyCheck()
         ui->label_3->setText("0x" + QString::number(USB_data[1], 'i', 0));
         ui->label_3->setStyleSheet("color: rgb(100, 0, 0)");
 
-        double y = (USB_data[2] << 8) + USB_data[3];
+        double y = (USB_data[2] << 8) + USB_data[3];                                                                    // description adc value
         double x = y * 3 / 4096;
         sprintf(str, "%0.2f", x);
-        ui->label_4->setText(str); // description adc value
+        ui->label_4->setText(str);
         ui->label_4->setStyleSheet("color: rgb(100, 0, 0)");
     }
 }
